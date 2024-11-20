@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SmartBins</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f7fb;
+            margin: 0;
+            padding: 0;
+        }
+
+        .form {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            border: 2px solid #0077b6; /* Border added */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Optional shadow for a subtle 3D effect */
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .form div {
+            margin-bottom: 15px; /* Added gap between fields */
+            width: 100%;
+        }
+
+        label {
+            font-size: 16px;
+            color: #333;
+        }
+
+        input, textarea {
+            padding: 12px;
+            width: 75%;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 15px;
+        }
+
+        .radio-group input {
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 12px;
+            font-size: 16px;
+            color: white;
+            background-color: #0077b6;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #005f8a;
+        }
+
+        .home-button a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .home-button {
+            display: block;
+            background-color: #0077b6;
+            margin-top: 10px;
+        }
+        #bi{color: rgb(0, 162, 255);}
+        
+    /* Footer */
+    .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 19px;
+    }
+    
+    .footer p {
+        margin: 0;
+    }
+    .social-links a{
+        text-decoration: none;
+        color: wheat;
+    }
+    .checkboxes{
+        font-size: 16ppx;
+    }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2 ><u>Contact Us</u> <div style="float: right;
+        padding-left: 350px;">smart<span id="bi">bins</span></h2></div>
+    </div>
+
+    <form action="#" method="post" class="form">
+        <div><label for="name">Name</label></div>
+        <div><input type="text" id="name" name="name" required></div>
+
+        <div><label for="email">Email</label></div>
+        <div><input type="email" id="email" name="email" required></div>
+
+        <div><label for="address">Address</label></div>
+        <div><input type="text" id="address" name="address" required></div>
+
+        <div><label for="mobile">Phone Number</label></div>
+        <div><input type="text" id="mobile" name="phone_number" pattern="[0-9]{10}" required></div>
+
+        <div><label for="message">Any other Message</label></div>
+        <div><textarea id="message" name="message" rows="5" required></textarea></div>
+        <div><label for="type"></label></div>
+        <!-- Radio Button Group -->
+        <div class="radio-group">
+            <label>Do you have our app?</label>
+            <input type="radio" id="yes" name="app" value="yes">
+            <label for="yes">Yes</label>
+            <input type="radio" id="no" name="app" value="no">
+            <label for="no">No</label>
+        </div>
+        <div>
+        <div class="checkboxes">
+            Which type of dustbin you want?
+            <select name="type" id="type">
+                <option value="Basic">Basic SmartBin</option>
+                <option value="Advanced SmartBin">Advanced SmartBin</option>
+                <option value="Compact SmartBin">Compact SmartBin</option>
+                <option value="Smart Recycling Bin">Smart Recycling Bin</option>
+                <option value="Large-Capacity SmartBin">Large-Capacity SmartBin</option>    
+            </select>
+        </div>
+        </div>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <div class="home-button">
+            <a href="index.html">Home</a>
+        </div>
+    </form>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 smart<span style="color: aqua;">bin</span> | Innovating Urban Waste Management</p>
+        </div>
+        <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon">Facebook</a>
+            <a href="https://www.twitter.com" target="_blank" class="social-icon">Twitter</a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">Instagram</a>
+            <a href="https://www.linkedin.com" target="_blank" class="social-icon">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+</html>
