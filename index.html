@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartBin-Smart Waste Management </title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        header{
+            width: 100%;
+            background-color: black;
+            height: 50px;
+        }
+        .span{
+            padding: 7px 0px 0px 40px;
+            font-size: 25px;
+            width:fit-content;
+        }
+        #smart{
+            color: aliceblue;
+        }
+        #bins{
+            color: aqua;
+        }
+        header{
+            display: flex;
+            color: aliceblue;
+        }
+        header ul{
+            display: flex;
+            text-align: center;
+            justify-content:center;
+            list-style: none;
+        }
+        header ul li{
+            padding: 11px 105px 0px 0px;
+            font-size: 20px;
+            
+        }
+        header a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+        #home{
+            padding-left:  195px;
+        }
+        .hero {
+            height: 350px;
+            background-color: #00ffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 25px;
+        }
+        #tech{
+            font-size: 20px;
+        }
+        .navbar a:hover{
+            color: #00ffff;
+        }
+        .so{
+            height: 50px;
+            color:#010f0f;
+            font-weight: 200;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            padding-left: 20px;
+            background-color: rgb(245, 250, 251);
+            border: 1px solid black;
+        }
+        .wastefact {
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch; 
+            background: linear-gradient(to right, #00ffff, #00b3b3);
+            padding: 20px;
+            gap: 10px;
+            background: url('.jpg') no-repeat center center/cover; 
+}
+.wastefact div {
+    display: flex;
+    flex-direction: column;
+    height: 200px;/*same height for each div*/
+    flex: 1; /* Equal width for each div */
+    padding: 100px 20px 20px 20px;
+    background-color: white;
+    border-radius: 8px ;
+    border: 2px solid #00ffff;
+    padding-bottom: 45px;
+}
+.food {
+    background-image: url('media/Untitled design.png');
+    background-size: cover; /* Make the background cover the entire div */
+}
+.food h3{
+    color: rgb(14, 192, 241);
+}
+.food p{
+    color: aliceblue;
+    padding-top: 15px;
+}
+.bacteria h3{
+    color: #00ffff;
+}
+.bacteria{
+    background-image: url('media/1.png');
+    background-size: cover; /* Make the background cover the entire div */
+    color: aliceblue;
+    gap: 15px;
+
+}
+.country h3{
+    color: aqua;
+
+}
+
+.country{
+    background-image: url('media/2.png');
+    background-size: cover; /* Make the background cover the entire div */
+    color: aliceblue;
+    gap: 15px;
+}
+
+.aboutus {
+    height: 50px; 
+    background-color: #00796b; 
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    color: #ffffff; 
+}
+
+/* About Us Main Content Section */
+.aboutus0 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0f2f1;
+    padding: 40px 20px;
+}
+
+.aboutus1 {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 2px solid #b0bec5;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    gap: 20px;
+}
+
+/* Image in About Us */
+.aboutus1 img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+/* Text Content in About Us */
+.aboutus1 .content {
+    font-size: 18px;
+    color: #4f4f4f;
+}
+
+.aboutus1 ul {
+    line-height: 1.65;
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style-type: disc;
+    color: #00796b;
+}
+.aboutus2{
+    height: 50px;
+    background-color: #00796b;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    color: #ffffff;
+
+}
+.aboutus3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0f2f1;
+    padding: 20px 70px 20px 70px;
+}
+.aboutus4{
+    background-color: #ffffff;
+}
+.aboutus4{
+    margin: 35px;
+    line-height: 1.6;
+    padding: 15px 0 15px 15px;
+    gap: 15px;
+    border: 2px solid #b0bec5;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00796b;
+    
+}
+.aboutus3 img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.aboutus4 p{
+    margin-bottom: 5px;
+}
+.aboutus1 .content ul {
+    margin-top: 10px; 
+    padding-left: 20px; /* Indentation for list items */
+    list-style-type: disc; /* Adds bullet points */
+    color: #00796b;
+}
+.impact{
+    height: 50px;
+    background-color: #fafafa;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    color: #000000;
+    border: 1px solid black;
+}
+.iimpact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e0f2f1;
+    padding: 20px 70px 20px 70px;
+}
+.impact0{
+    background-color: #ffffff;
+}
+.impact0{
+    margin: 35px;
+    line-height: 1.6;
+    padding: 15px 0 15px 15px;
+    gap: 15px;
+    border: 2px solid #b0bec5;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #00796b;
+    
+}
+.impact0 img {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.impact0 ul {
+    margin-top: 10px; 
+    padding-left: 20px; /* Indentation for list items */
+    list-style-type: disc; /* Adds bullet points */
+    color: #00796b;
+}
+
+    /* Footer */
+    .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+        font-size: 19px;
+    }
+    
+    .footer p {
+        margin: 0;
+    }
+    .social-links a{
+        text-decoration: none;
+        color: wheat;
+    }
+    .reviews-section {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.reviews-section h2 {
+    font-size: 24px;
+    color: #00796b;
+    margin-bottom: 20px;
+}
+
+.review {
+    background-color: #ffffff;
+    border: 1px solid #b0bec5;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 600px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review-text {
+    font-size: 18px;
+    color: #4f4f4f;
+    margin-bottom: 10px;
+}
+
+.review-author {
+    font-size: 16px;
+    color: #00796b;
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="span">
+            <span  id="smart">smart</span><span id="bins">bins</span>
+        </div>
+        <ul class="navbar">
+                <li id="home"><a href="index.html">Home</a></li>
+                <li><a href="WhatProblemWeSolve.html">What Problem we Solve?</a></li>
+                <li><a href="Services.html">Services </a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+        </ul>
+        </div>
+    </header>
+    <div class="hero">
+        <div><h1>Innovating Urban-Waste Management System</h1></div>
+        <div id="tech">"CLEANER   GREENER   SAFER"</div>
+    </div>
+
+    <div class="so">
+        <h2>Some Waste Facts</h2>
+    </div>
+    <div class="wastefact">
+        <div class="food"><h3>Food Waste <span id="12">Is a Major Contributor </span> Climate Change:</h3>
+
+            <p>Globally, about one-third of all food produced goes to waste. This wasted food contributes 8-10% of total greenhouse gas emissions, mainly from the decomposition of organic waste in landfills, which produces methane, a potent greenhouse gas</p>
+        </div>
+        <div class="bacteria"><h3>Discovery of Plastic-Eating Bacteria:</h3>
+            In 2016, Japanese scientists discovered a bacterium named Ideonella sakaiensis, which can break down PET plastic, commonly used in bottles and containers.These enzymes could revolutionize recycling by enabling a circular economy where plastics are efficiently broken down and reused. This could dramatically reduce plastic waste, especially hard-to-recycle plastics, which often end up in landfills or incinerated.
+       </div>
+        <div class="country"><h3>Some Countries Are Almost Completely Waste-Free:</h3>
+
+           <p> Sweden, for instance, has developed a near zero-waste system. They recycle about 99% of their household waste and use much of it to produce energy, resulting in minimal landfill usage.</p></div>
+    </div>
+    <div class="aboutus">
+        <h2>Innovation and Uniqueness</h2>
+    </div>
+    <div class="aboutus0">
+        <div class="aboutus1">
+            <img  src="media/WhatsApp Image 2024-11-10 at 14.14.11_069af0ce.jpg">
+            <div>
+                <p>
+                    <strong><u>KEY FEATURES</strong></u>
+                </p><ul><li>Real-Time Monitoring: Provides immediate updates on waste levels in bins.</li>
+                    <li>Optimized Collection Routes: Reduces fuel consumption and operational costs by streamlining collection.</li>
+                    <li>Community Engagement: Promotes awareness of waste segregation and responsible disposal among citizens.</li></ul></div>
+        </div>
+    </div>
+    <div class="aboutus2"><h2>Technology Used</h2></div>
+    <div class="aboutus3">
+        <div class="aboutus4">
+            <img  src="media/WhatsApp Image 2024-11-10 at 14.14.08_cac3a9d9.jpg">
+            <div class="hello">
+                <p style="color: black;">
+                    <strong><u>COMPONENTS</strong></u>
+                </p><ul><li>IoT Sensors: Use ultrasonic technology to detect fill levels in dustbins.When the <strong>smartbin</strong> is filled upto 95% an alarm is sent to the nearby collector machines and the next day the collector will empty the <strong>smartbin.</strong> </li>
+                    <li>Data Transmission: Implement GSM(GSM uses the same network as cell phones, so it’s ideal if you need reliable connectivity across a wide area.
+                        ) or LoRaWAN(LoRaWAN is designed for low-power, long-distance communication. It’s great for devices that only need to send small amounts of data, such as sensors sending simple measurements (like a bin's waste level).) for effective communication of data.</li>
+                    <li>Mobile Application: Provides a user-friendly interface for municipal monitoring and management of waste collection.</li></ul></div>
+        </div>
+    </div>
+    <div class="impact">
+        <h3>IMPACT AND OUTCOMES </h3></div>
+    <div class="iimpact">
+        <div class="impact0">
+            <img src="media/3.jpeg"><div class="impact1"><strong style="color: black;"><u>EXPECTED BENEFITS</u></strong>
+    <ul><li>Cleaner urban environments with less litter and improved hygiene.</li>
+    <li>Enhanced efficiency in waste collection, leading to significant cost
+        savings.</li>
+    <li> Increased recycling rates through better waste segregation practices.</li></ul></div>
+    </div></div>
+    <div class="reviews-section">
+        <h2>What Our Users Say about us?</h2>
+        <div class="review">
+            <p class="review-text">"SmartBin has transformed waste management in our neighborhood. It's efficient, and we love the community engagement!"</p>
+            <p class="review-author">- Ashwini</p>
+        </div>
+        <div class="review">
+            <p class="review-text">"I am impressed by how much cleaner our area has become thanks to SmartBin's timely alerts and optimized collection routes!"</p>
+            <p class="review-author">-Vinay</p>
+        </div>
+        <div class="review">
+            <p class="review-text">"An innovative solution that actually makes a difference in urban waste management. Kudos to the SmartBin team!"</p>
+            <p class="review-author">- Ayush</p>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024  smart<span style="color: aqua;">bin</span> | Innovating Urban Waste Management</p>
+        </div>
+        <div class="social-links">
+            <a href="https://www.facebook.com" target="_blank" class="social-icon">Facebook</a>
+            <a href="https://www.twitter.com" target="_blank" class="social-icon">Twitter</a>
+            <a href="https://www.instagram.com" target="_blank" class="social-icon">Instagram</a>
+            <a href="https://www.linkedin.com" target="_blank" class="social-icon">LinkedIn</a>
+        </div>
+    </footer>
+</body>
+</html>
