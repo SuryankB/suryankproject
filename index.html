@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartBin-Smart Waste Management </title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
     <style>
         *{
             margin: 0px;
@@ -11,8 +12,9 @@
         }
         header{
             width: 100%;
-            background-color: rgb(161, 20, 20);
+            background-color: black;
             height: 50px;
+            overflow: hidden;
         }
         .span{
             padding: 7px 0px 0px 40px;
@@ -55,6 +57,7 @@
             justify-content: center;
             flex-direction: column;
             gap: 25px;
+            overflow: hidden;
         }
         #tech{
             font-size: 20px;
@@ -72,6 +75,7 @@
             padding-left: 20px;
             background-color: rgb(245, 250, 251);
             border: 1px solid black;
+            overflow: hidden;
         }
         .wastefact {
             display: flex;
@@ -81,9 +85,11 @@
             padding: 20px;
             gap: 10px;
             background: url('.jpg') no-repeat center center/cover; 
+            overflow: hidden;
 }
 .wastefact div {
     display: flex;
+    overflow: hidden;
     flex-direction: column;
     height: 200px;/*same height for each div*/
     flex: 1; /* Equal width for each div */
@@ -116,10 +122,11 @@
 }
 .country h3{
     color: aqua;
-
+    overflow: hidden;
 }
 
 .country{
+    overflow: hidden;
     background-image: url('media/2.png');
     background-size: cover; /* Make the background cover the entire div */
     color: aliceblue;
@@ -127,6 +134,7 @@
 }
 
 .aboutus {
+    overflow: hidden;
     height: 50px; 
     background-color: #00796b; 
     display: flex;
@@ -137,6 +145,7 @@
 
 /* About Us Main Content Section */
 .aboutus0 {
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -145,6 +154,7 @@
 }
 
 .aboutus1 {
+    overflow: hidden;
     display: flex;
     align-items: center;
     background-color: #ffffff;
@@ -165,12 +175,14 @@
 
 /* Text Content in About Us */
 .aboutus1 .content {
+    overflow: hidden;
     font-size: 18px;
     color: #4f4f4f;
 }
 
 .aboutus1 ul {
     line-height: 1.65;
+    overflow: hidden;
     margin-top: 10px;
     padding-left: 20px;
     list-style-type: disc;
@@ -179,6 +191,7 @@
 .aboutus2{
     height: 50px;
     background-color: #00796b;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -188,6 +201,7 @@
 }
 .aboutus3{
     display: flex;
+    overflow: hidden;
     justify-content: center;
     align-items: center;
     background-color: #e0f2f1;
@@ -214,9 +228,11 @@
     width: 250px;
     border-radius: 50%;
     margin-right: 20px;
+    
 }
 .aboutus4 p{
     margin-bottom: 5px;
+
 }
 .aboutus1 .content ul {
     margin-top: 10px; 
@@ -230,6 +246,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    overflow: hidden;
     padding-left: 20px;
     color: #000000;
     border: 1px solid black;
@@ -239,6 +256,7 @@
     justify-content: center;
     align-items: center;
     background-color: #e0f2f1;
+    overflow: hidden;
     padding: 20px 70px 20px 70px;
 }
 .impact0{
@@ -247,6 +265,7 @@
 .impact0{
     margin: 35px;
     line-height: 1.6;
+    overflow: hidden;
     padding: 15px 0 15px 15px;
     gap: 15px;
     border: 2px solid #b0bec5;
@@ -319,6 +338,185 @@
     color: #00796b;
     font-weight: bold;
 }
+.toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+@media screen and (max-width: 431px) {
+    /* Hide the navbar and show the toggle menu */
+    header {
+    position: relative;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+}
+#home{
+    padding-left: 0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Start off-screen */
+    width: 300px;
+    height: 100%; /* Full screen height */
+    background-color: #000000;
+    display: flex;
+    padding-left: 20px;
+    padding-top: 20px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: left 0.3s ease; /* Smooth slide-in effect */
+}
+
+.navbar ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    width: 100%;
+    margin-bottom: 15px; /* Add spacing between items */
+}
+.span{
+    padding-left: 0px;
+    text-align: left;
+}
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    display: block; /* Ensure full width for hover effect */
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #00ffff;
+    background-color: #4f4f4f;
+}
+
+.navbar.show {
+    left: 0; /* Slide into view */
+}
+
+.toggle {
+    font-size: 25px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1000; /* Ensure it's above the navbar */
+    display: flex;
+        justify-content: end;
+        padding-left: 220px;
+    }
+}
+
+
+    
+    /* Center hero text and adjust padding */
+    .hero h1 {
+        padding: 0 15px;
+        font-size: 19px;
+        text-align: center;
+    }
+
+    #tech {
+        font-size: 13px;
+        text-align: center;
+    }
+
+    /* Stack waste fact cards vertically */
+    .wastefact {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .wastefact div {
+        padding: 15px;
+        text-align: center;
+        height: auto; /* Let divs adjust their height automatically */
+    }
+
+    /* Center content in the About Us section */
+    .aboutus0 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .aboutus1 {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .aboutus1 img, .aboutus4 img {
+        width: 200px;
+        height: 200px;
+    }
+    .aboutus3{
+        display: flex;
+        flex-direction: column;
+       align-items: center;
+        text-align: center;
+    }
+    .aboutus4{
+        display: flex;
+        flex-direction: column;
+        padding: 18px 75px 18px 75px;
+        gap: 20px;
+       align-items: center;
+        text-align: center;
+    }
+    .iimpact{flex-direction: column;
+       align-items: center;
+        text-align: center;
+    }
+    .impact0{
+        display: flex;
+        flex-direction: column;
+        padding: 18px 55px 18px 55px;
+        gap: 20px;
+       align-items: center;
+        text-align: center;
+    }
+    
+    /* Footer alignment adjustments */
+    .footer {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    .so{
+        display: flex;
+        justify-content: center;
+    }
+    .aboutus{
+        display: flex;
+        justify-content: center;
+    }
+    .aboutus2{
+        display: flex;
+        justify-content: center;
+    }
+    .impact{
+        display: flex;
+        justify-content: center;
+    }
+
+
 
     </style>
 </head>
@@ -329,10 +527,11 @@
         </div>
         <ul class="navbar">
                 <li id="home"><a href="index.html">Home</a></li>
-                <li><a href="whatproblemwesolve.html">What Problem we Solve?</a></li>
+                <li style="text-align: left; width: 250px;"><a href="WhatProblemWeSolve.html">What Problem we Solve?</a></li>
                 <li><a href="Services.html">Services </a></li>
-                <li><a href="ContactUs.html">ContactUs</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
         </ul>
+        <a href="#"  class="toggle"><i class="fa-solid fa-bars"></i></a>
         </div>
     </header>
     <div class="hero">
@@ -372,7 +571,7 @@
     <div class="aboutus2"><h2>Technology Used</h2></div>
     <div class="aboutus3">
         <div class="aboutus4">
-            <img  src="media/WhatsApp Image 2024-11-10 at 14.14.08_cac3a9d9.jpg">
+            <div><img  src="media/WhatsApp Image 2024-11-10 at 14.14.08_cac3a9d9.jpg"></div>
             <div class="hello">
                 <p style="color: black;">
                     <strong><u>COMPONENTS</strong></u>
@@ -419,5 +618,15 @@
             <a href="https://www.linkedin.com" target="_blank" class="social-icon">LinkedIn</a>
         </div>
     </footer>
+    <script>document.addEventListener("DOMContentLoaded", function () {
+        const toggleButton = document.querySelector(".toggle");
+        const navbar = document.querySelector(".navbar");
+    
+        toggleButton.addEventListener("click", function () {
+            // Toggle a class to show/hide the navbar
+            navbar.classList.toggle("show");
+        });
+    })</script>
+    
 </body>
 </html>
